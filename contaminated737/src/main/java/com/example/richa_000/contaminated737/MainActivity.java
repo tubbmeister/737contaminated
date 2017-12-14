@@ -247,15 +247,15 @@ public class MainActivity extends AppCompatActivity {
 
          else if (flaps40.isChecked())   {
             flaps = "forty";
-            ii=8;
+            ii=12; //new flap 40 start point
             stop=0;
-            stopper = 8; //get iteration to end MUST CHECK
+            stopper = 12; //get iteration to end MUST CHECK
         }
 
         else if (oeif15.isChecked())   {
             flaps = "oeif15";
-            stopper=16;
-            ii=16; //need new number
+            stopper=24;
+            ii=24; //need new number
             stop=0;
         }
 
@@ -281,7 +281,7 @@ public class MainActivity extends AppCompatActivity {
                weight = ("" + myNum); //convert int to str
         Resources r = getResources();
         int printResult =-1;
-            for ( ii = stopper; ii <= 22; ii++) {
+            for ( ii = stopper; ii <= 33; ii++) {
 
                 stop++;
                 if (ii == 0) {
@@ -327,19 +327,19 @@ public class MainActivity extends AppCompatActivity {
                     printResult++;
                 }
                 else if (ii == 8) {
-                    bases = r.getIntArray(R.array.f30_medium_ab1);
+                    bases = r.getIntArray(R.array.f30_medium_abmax);
                     printResult++;
                 }
                 else if (ii == 9) {
-                    bases = r.getIntArray(R.array.f30_medium_ab2);
-                    printResult++;
-                }
-                else if (ii == 10) {
                     bases = r.getIntArray(R.array.f30_medium_ab3);
                     printResult++;
                 }
+                else if (ii == 10) {
+                    bases = r.getIntArray(R.array.f30_medium_ab2);
+                    printResult++;
+                }
                 else if (ii == 11) {
-                    bases = r.getIntArray(R.array.f30_medium_abmax);
+                    bases = r.getIntArray(R.array.f30_medium_ab1);
                     printResult++;
                 }
                 else if (ii == 12) {
@@ -378,27 +378,27 @@ public class MainActivity extends AppCompatActivity {
                     bases = r.getIntArray(R.array.f40_good_ab2);
                     printResult++;
                 }
-                else if (ii == 15) {
+                else if (ii == 19) {
                     bases = r.getIntArray(R.array.f40_good_ab1);
                     printResult++;
                 }
-                else if (ii == 15) {
-                    bases = r.getIntArray(R.array.f40_medium_ab1);
-                    printResult++;
-                }
-                else if (ii == 15) {
-                    bases = r.getIntArray(R.array.f40_medium_ab2);
-                    printResult++;
-                }
-                else if (ii == 15) {
-                    bases = r.getIntArray(R.array.f40_medium_ab3);
-                    printResult++;
-                }
-                else if (ii == 15) {
+                else if (ii == 20) {
                     bases = r.getIntArray(R.array.f40_medium_abmax);
                     printResult++;
                 }
-                else if (ii == 16) {
+                else if (ii == 21) {
+                    bases = r.getIntArray(R.array.f40_medium_ab3);
+                    printResult++;
+                }
+                else if (ii == 22) {
+                    bases = r.getIntArray(R.array.f40_medium_ab2);
+                    printResult++;
+                }
+                else if (ii == 23) {
+                    bases = r.getIntArray(R.array.f40_medium_ab1);
+                    printResult++;
+                }
+                else if (ii == 24) {
                     bases = r.getIntArray(R.array.f15oei_dry_max_man);
                     printResult=0;
 
@@ -410,15 +410,17 @@ public class MainActivity extends AppCompatActivity {
                     textView9.setText("");
                     TextView textView13 = (TextView) findViewById(R.id.textView13);
                     textView13.setText("");
+                    TextView textView21 = (TextView) findViewById(R.id.textView21);
+                    textView21.setText("");
                 }
-                else if (ii == 17) {
+                else if (ii == 25) {
                     bases = r.getIntArray(R.array.f15oei_dry_abmax);
                     printResult++;
                     TextView textView8 = (TextView) findViewById(R.id.textView8);
                     textView8.setText("AB Max");
                 }
 
-                else if (ii == 18) {
+                else if (ii == 26) {
                     bases = r.getIntArray(R.array.f15oei_dry_ab2);
                     printResult++;
                     TextView textView14 = (TextView) findViewById(R.id.textView14);
@@ -426,16 +428,28 @@ public class MainActivity extends AppCompatActivity {
 
 
                 }
-                else if (ii == 19) {
+                else if (ii == 27) {
                     bases = r.getIntArray(R.array.f15oei_good_max_man);
                     printResult=printResult+3;
                 }
-                else if (ii == 20) {
+                else if (ii == 28) {
                     bases = r.getIntArray(R.array.f15oei_good_abmax);
                     printResult++;
                 }
-                else if (ii == 21) {
+                else if (ii == 29) {
                     bases = r.getIntArray(R.array.f15oei_good_ab2);
+                    printResult++;
+                }
+                else if (ii == 30) {
+                    bases = r.getIntArray(R.array.f15oei_medium_max_man);
+                    printResult=printResult+2;
+                }
+                else if (ii == 31) {
+                    bases = r.getIntArray(R.array.f15oei_medium_abmax);
+                    printResult++;
+                }
+                else if (ii == 32) {
+                    bases = r.getIntArray(R.array.f15oei_medium_ab3);
                     printResult++;
                 }
 
@@ -532,44 +546,61 @@ public class MainActivity extends AppCompatActivity {
 
 
             if (printResult==0) {
-                TextView textView1 = (TextView) findViewById(R.id.textView);
+                TextView textView1 = (TextView) findViewById(R.id.textView);//dry ab3
                 textView1.setText(weight);
 
             }
             else if (printResult==1){
-                TextView textView1 = (TextView) findViewById(R.id.textView3);
+                TextView textView1 = (TextView) findViewById(R.id.textView3);//dry ab2
                 textView1.setText(weight);
 
             }
 
             else if (printResult==2){
-                TextView textView1 = (TextView) findViewById(R.id.textView4);
+                TextView textView1 = (TextView) findViewById(R.id.textView4);//dry ab 1
                 textView1.setText(weight);
 
             }
             else if (printResult==3){
-                TextView textView1 = (TextView) findViewById(R.id.textView9);
+                TextView textView1 = (TextView) findViewById(R.id.textView9);//dry abmx
                 textView1.setText(weight);
 
             }
             else if (printResult==4) {
-                TextView textView1 = (TextView) findViewById(R.id.textView13);
+                TextView textView1 = (TextView) findViewById(R.id.textView13);//good abmax
                 textView1.setText(weight);
 
             }
 
              else if (printResult==5){
-                TextView textView1 = (TextView) findViewById(R.id.textView12);
+                TextView textView1 = (TextView) findViewById(R.id.textView12);//good ab3
                 textView1.setText(weight);
 
             }
             else if (printResult==6){
-                TextView textView1 = (TextView) findViewById(R.id.textView11);
+                TextView textView1 = (TextView) findViewById(R.id.textView11);//good ab2
                 textView1.setText(weight);
 
             }
             else if (printResult==7){
-                TextView textView1 = (TextView) findViewById(R.id.textView10);
+                TextView textView1 = (TextView) findViewById(R.id.textView10);//good ab1
+                textView1.setText(weight);
+
+            }
+            else if (printResult==8){
+                TextView textView1 = (TextView) findViewById(R.id.textView21);//med abmx
+                textView1.setText(weight);
+
+            }else if (printResult==9){
+                TextView textView1 = (TextView) findViewById(R.id.textView22);//good ab3
+                textView1.setText(weight);
+
+            }else if (printResult==10){
+                TextView textView1 = (TextView) findViewById(R.id.textView23);//good ab2
+                textView1.setText(weight);
+
+            }else if (printResult==11){
+                TextView textView1 = (TextView) findViewById(R.id.textView24);//good ab1
                 textView1.setText(weight);
 
             }
@@ -585,8 +616,8 @@ public class MainActivity extends AppCompatActivity {
 
 
 //======== Hide Virtual Keyboard =====================//
-        if (stop==8 || stop==16) { //  || is "or"
-            ii=19;
+        if (stop==12 || stop==16) { //  || is "or"
+            ii=33;
         }
 
     }
