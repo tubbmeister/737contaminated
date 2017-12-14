@@ -327,38 +327,54 @@ public class MainActivity extends AppCompatActivity {
                     printResult++;
                 }
                 else if (ii == 8) {
+                    bases = r.getIntArray(R.array.f30_medium_ab1);
+                    printResult++;
+                }
+                else if (ii == 9) {
+                    bases = r.getIntArray(R.array.f30_medium_ab2);
+                    printResult++;
+                }
+                else if (ii == 10) {
+                    bases = r.getIntArray(R.array.f30_medium_ab3);
+                    printResult++;
+                }
+                else if (ii == 11) {
+                    bases = r.getIntArray(R.array.f30_medium_abmax);
+                    printResult++;
+                }
+                else if (ii == 12) {
                     bases = r.getIntArray(R.array.f40_dry_ab3);
                     printResult=0;
                     TextView textView7 = (TextView) findViewById(R.id.textView7);
                     textView7.setText("AB 3");
                }
-                else if (ii == 9) {
+                else if (ii == 13) {
                     bases = r.getIntArray(R.array.f40_dry_ab2);
                     printResult++;
                     TextView textView8 = (TextView) findViewById(R.id.textView8);
                     textView8.setText("AB 2");
                 }
-                else if (ii == 10) {
+                else if (ii == 14) {
                     bases = r.getIntArray(R.array.f40_dry_ab1);
                     printResult++;
                     TextView textView14 = (TextView) findViewById(R.id.textView14);
                     textView14.setText("AB 1");
                 }
-                else if (ii == 11) {
+                else if (ii == 15) {
                     bases = r.getIntArray(R.array.f40_dry_abmax);
                     printResult++;
                     TextView textView2 = (TextView) findViewById(R.id.textView2);
                     textView2.setText("AB Max");
                 }
-                else if (ii == 12) {
+                else if (ii == 16) {
                     bases = r.getIntArray(R.array.f40_good_abmax);
                     printResult++;
                 }
-                else if (ii == 13) {
+                else if (ii == 17) {
                     bases = r.getIntArray(R.array.f40_good_ab3);
                     printResult++;
                 }
-                else if (ii == 14) {
+                else if (ii == 18) {
                     bases = r.getIntArray(R.array.f40_good_ab2);
                     printResult++;
                 }
@@ -366,7 +382,22 @@ public class MainActivity extends AppCompatActivity {
                     bases = r.getIntArray(R.array.f40_good_ab1);
                     printResult++;
                 }
-
+                else if (ii == 15) {
+                    bases = r.getIntArray(R.array.f40_medium_ab1);
+                    printResult++;
+                }
+                else if (ii == 15) {
+                    bases = r.getIntArray(R.array.f40_medium_ab2);
+                    printResult++;
+                }
+                else if (ii == 15) {
+                    bases = r.getIntArray(R.array.f40_medium_ab3);
+                    printResult++;
+                }
+                else if (ii == 15) {
+                    bases = r.getIntArray(R.array.f40_medium_abmax);
+                    printResult++;
+                }
                 else if (ii == 16) {
                     bases = r.getIntArray(R.array.f15oei_dry_max_man);
                     printResult=0;

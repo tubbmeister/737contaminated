@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer-array name="f30_medium_abmax">
+        <item>5390</item>
+        <item>470</item>
+        <item>470</item>
+        <item>150</item>
+        <item>-290</item>
+        <item>-1050</item>
+        <item>-180</item> <!-- must be minus to work!!! -->
+        <item>-150</item>
+        <item>130</item>   <!-- app spd adjust -->
+        <item>-130</item>
+        <item>460</item>
+        <item>520</item>  <!-- 1 t/r -->
+        <item>2220</item>  <!-- 0 t/r -->
+
+
+
+
+
+    </integer-array>
+
+</resources>
