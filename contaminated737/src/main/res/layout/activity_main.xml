@@ -23,8 +23,7 @@
         android:id="@+id/editText3"
         android:layout_width="91dp"
         android:layout_height="44dp"
-        android:layout_marginLeft="34dp"
-        android:layout_marginStart="32dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="OAT deg C"
@@ -141,14 +140,13 @@
         android:id="@+id/checkBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
+        android:layout_marginLeft="16dp"
         android:layout_marginTop="8dp"
         android:checked="false"
         android:text="Meters?"
         app:layout_constraintLeft_toRightOf="@+id/radioGroup"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="Meters?"
-        android:layout_marginStart="8dp" />
+        tools:text="Meters?" />
 
     <RadioGroup
         android:id="@+id/radioGroup"
@@ -188,24 +186,21 @@
 
     <RadioGroup
         android:id="@+id/radioGroup1"
-        android:layout_width="140dp"
-        android:layout_height="72dp"
+        android:layout_width="115dp"
+        android:layout_height="71dp"
+        android:layout_marginLeft="16dp"
         android:layout_marginTop="8dp"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toRightOf="@+id/checkBox"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
         app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp">
+        app:layout_constraintTop_toTopOf="parent">
 
         <RadioButton
             android:id="@+id/radioButton4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="2 T/R"
-            android:checked="true"/>
+            android:checked="true"
+            android:text="2 T/R" />
 
         <RadioButton
             android:id="@+id/radioButton5"
@@ -528,7 +523,6 @@
         android:id="@+id/checkBox2"
         android:layout_width="96dp"
         android:layout_height="30dp"
-        android:layout_marginTop="8dp"
         android:checked="false"
         android:text="Autoland?"
         app:layout_constraintStart_toStartOf="@+id/checkBox"
