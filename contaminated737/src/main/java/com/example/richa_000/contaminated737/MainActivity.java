@@ -32,8 +32,8 @@ public class MainActivity extends AppCompatActivity {
     private String flaps;
     int[] bases;
     int ii,stop;
-    int metric;
-    private CheckBox checkBox;
+    int metric,autoLandAddition,autoLandAdditive;
+    private CheckBox checkBox,checkBox2;
     double units = 1;
     public RadioGroup radioGroup, radioGroup1;
     private RadioButton oeif15,flaps30, flaps40, tr2,tr1,tr0,other;
@@ -45,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
 
         //radioGroup = (RadioGroup) findViewById(radioGroup);
         addListenerOnChkIos();
+        addListenerAutoLand(); //listen for autoland checkbox
                ;
 
 
@@ -540,8 +541,10 @@ public class MainActivity extends AppCompatActivity {
                 ref_dist = ref_dist + ref_dist1 + ref_dist2 + ref_dist3 + ref_dist7+ref_dist8+ref_dist9;
                 // ref_dist=floor(ref_dist);
                 int i = (int) ref_dist;
+                i=i+autoLandAdditive;//add 1000' here if autoland checked
                 double aa = (i/units);//convert feet to meters
                 int a =(int)Math.round(aa); //get rid of decimal
+
                 weight = ("" + a);
 
 
@@ -702,6 +705,27 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else  {
                     units=1;
+                }
+                sendMessage(v);// run calc again
+            }
+        });
+
+    }
+
+    public void addListenerAutoLand() {
+
+        checkBox2 = (CheckBox) findViewById(R.id.checkBox2);
+
+        checkBox2.setOnClickListener(new OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                //is chkIos checked?
+                if (((CheckBox) v).isChecked()) {
+                    autoLandAdditive=1000;
+                }
+                else  {
+                    autoLandAdditive=0;  //add 1000' or 0' to landing distance based on checkbox
                 }
                 sendMessage(v);// run calc again
             }
