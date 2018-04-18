@@ -14,6 +14,7 @@ import android.view.View.OnClickListener;
 import android.view.View.OnFocusChangeListener;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -46,7 +47,11 @@ public class MainActivity extends AppCompatActivity {
         //radioGroup = (RadioGroup) findViewById(radioGroup);
         addListenerOnChkIos();
         addListenerAutoLand(); //listen for autoland checkbox
-               ;
+
+        addListenerRadioGroup();
+        addListenerRadioGroup1();
+
+        ;
 
 
 
@@ -148,6 +153,12 @@ public class MainActivity extends AppCompatActivity {
 
         });
     }
+
+
+
+
+
+
 
     public void sendMessage(View v) {
         EditText editText = (EditText) findViewById(R.id.editText);
@@ -624,9 +635,9 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
-        Toast.makeText(getApplicationContext(), "Press \""+"Calculate!" + "\" again if Flaps or T/R settings changed",
+      //  Toast.makeText(getApplicationContext(), "Press \""+"Calculate!" + "\" again if Flaps or T/R settings changed",
 
-                Toast.LENGTH_LONG).show();
+      //          Toast.LENGTH_LONG).show(); not needed with this version
 }
 
 
@@ -711,6 +722,40 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+    public void addListenerRadioGroup () {
+
+        RadioGroup radioGroup = (RadioGroup) findViewById(R.id.radioGroup);
+
+        radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+
+            // checkedId is the RadioButton selected
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                 Button btn;
+                btn=(Button)findViewById(R.id.button);
+                btn.performClick();
+            }
+
+        });
+    }
+
+    public void addListenerRadioGroup1 () {
+
+        RadioGroup radioGroup1 = (RadioGroup) findViewById(R.id.radioGroup1);
+
+        radioGroup1.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+
+            // checkedId is the RadioButton selected
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                Button btn;
+                btn=(Button)findViewById(R.id.button);//this simulates pressing "calculate"
+                btn.performClick();  //                 button and runs code
+            }
+
+        });
+    }
+
 
     public void addListenerAutoLand() {
 
@@ -732,6 +777,9 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+
+
+
     @Override
     public void onBackPressed() {
         new AlertDialog.Builder(this)
@@ -771,4 +819,5 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
 }
