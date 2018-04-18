@@ -165,66 +165,53 @@ public class MainActivity extends AppCompatActivity {
         EditText editText = (EditText) findViewById(R.id.editText);
         String weight = editText.getText().toString();
         if (weight.trim().equals("")) { //shows "Enter data" if nothing in first editText box
-            Toast tosdada=Toast.makeText(MainActivity.this, "Ensure all data boxes filled!!",Toast.LENGTH_SHORT);
-            tosdada.setGravity(Gravity.CENTER,0,0);
-            tosdada.show();
+           // Toast tosdada=Toast.makeText(MainActivity.this, "Ensure all data boxes filled!!",Toast.LENGTH_SHORT);
+          ///  tosdada.setGravity(Gravity.CENTER,0,0);
+        //    tosdada.show();
+            showTheToast();
             return; //quits method
         }
         EditText elevnText = (EditText) findViewById(R.id.editText2);
 
         String elevation = elevnText.getText().toString();
         if (elevation.trim().equals("")) { //shows "Enter data" if nothing in first editText box
-            Toast tosdada=Toast.makeText(MainActivity.this, "Ensure all data boxes filled!!",Toast.LENGTH_SHORT);
-            tosdada.setGravity(Gravity.CENTER,0,0);
-            tosdada.show();
+            showTheToast();
             return; //quits method
         }
         EditText tempText = (EditText) findViewById(R.id.editText3);
         String temp = tempText.getText().toString();
         if (temp.trim().equals("")) { //shows "Enter data" if nothing in first editText box
-            Toast tosdada=Toast.makeText(MainActivity.this, "Ensure all data boxes filled!!",Toast.LENGTH_SHORT);
-            tosdada.setGravity(Gravity.CENTER,0,0);
-            tosdada.show();
+            showTheToast();
             return; //quits method
         }
         EditText winddctnText = (EditText) findViewById(R.id.editText4);
         String winddctn = winddctnText.getText().toString();
         if (winddctn.trim().equals("")) { //shows "Enter data" if nothing in first editText box
-            Toast tosdada=Toast.makeText(MainActivity.this, "Ensure all data boxes filled!!",Toast.LENGTH_SHORT);
-            tosdada.setGravity(Gravity.CENTER,0,0);
-            tosdada.show();
+            showTheToast();
             return; //quits method
         }
         EditText windspeedtext = (EditText) findViewById(R.id.editText5);
         String windspeed = windspeedtext.getText().toString();
         if (windspeed.trim().equals("")) { //shows "Enter data" if nothing in first editText box
-            Toast tosdada=Toast.makeText(MainActivity.this, "Ensure all data boxes filled!!",Toast.LENGTH_SHORT);
-            tosdada.setGravity(Gravity.CENTER,0,0);
-            tosdada.show();
+            showTheToast();
             return; //quits method
         }
         EditText rwText = (EditText) findViewById(R.id.editText6);
         String rwdctn = rwText.getText().toString();
         if (rwdctn.trim().equals("")) { //shows "Enter data" if nothing in first editText box
-            Toast tosdada=Toast.makeText(MainActivity.this, "Ensure all data boxes filled!!",Toast.LENGTH_SHORT);
-            tosdada.setGravity(Gravity.CENTER,0,0);
-            tosdada.show();
+            showTheToast();
             return; //quits method
         }
         EditText spdadjustText = (EditText) findViewById(R.id.editText7);
         String spdadjust = spdadjustText.getText().toString();
         if (spdadjust.trim().equals("")) { //shows "Enter data" if nothing in first editText box
-            Toast tosdada=Toast.makeText(MainActivity.this, "Ensure all data boxes filled!!",Toast.LENGTH_SHORT);
-            tosdada.setGravity(Gravity.CENTER,0,0);
-            tosdada.show();
+            showTheToast();
             return; //quits method
         }
         EditText slopeText = (EditText) findViewById(R.id.editText11);
         String slopeAdjust = slopeText.getText().toString();
         if (slopeAdjust.trim().equals("")) { //shows "Enter data" if nothing in first editText box
-            Toast tosdada=Toast.makeText(MainActivity.this, "Ensure all data boxes filled!!",Toast.LENGTH_SHORT);
-            tosdada.setGravity(Gravity.CENTER,0,0);
-            tosdada.show();
+            showTheToast();
             return; //quits method
         }
         double myNum, elevationNum, tempNum, winddctnNum, winspeedNum, rwdctnNum, spdadjustNum,slopeAdjustNum,trNum;
@@ -647,26 +634,20 @@ public class MainActivity extends AppCompatActivity {
         EditText winddctnText = (EditText) findViewById(R.id.editText4);
         String winddctn = winddctnText.getText().toString();
         if (winddctn.trim().equals("")) { //shows "Enter data" if nothing in first editText box
-            Toast tosdada=Toast.makeText(MainActivity.this, "Ensure all data boxes filled!!",Toast.LENGTH_SHORT);
-                    tosdada.setGravity(Gravity.CENTER,0,0);
-                    tosdada.show();
+            showTheToast();
             return; //quits method
 
         }
         EditText windspeedtext = (EditText) findViewById(R.id.editText5);
         String windspeed = windspeedtext.getText().toString();
         if (windspeed.trim().equals("")) { //shows "Enter data" if nothing in first editText box
-            Toast tosdada=Toast.makeText(MainActivity.this, "Ensure all data boxes filled!!",Toast.LENGTH_SHORT);
-            tosdada.setGravity(Gravity.CENTER,0,0);
-            tosdada.show();
+            showTheToast();
             return; //quits method
         }
         EditText rwText = (EditText) findViewById(R.id.editText6);
         String rwdctn = rwText.getText().toString();
         if (rwdctn.trim().equals("")) { //shows "Enter data" if nothing in first editText box
-            Toast tosdada=Toast.makeText(MainActivity.this, "Ensure all data boxes filled!!",Toast.LENGTH_SHORT);
-            tosdada.setGravity(Gravity.CENTER,0,0);
-            tosdada.show();
+            showTheToast();
             return; //quits method
         }
         double winddctnNum,winspeedNum,rwdctnNum;
@@ -799,6 +780,17 @@ public class MainActivity extends AppCompatActivity {
                 .show();
     }
 
+
+
+
+    public void showTheToast(){   //shows this warning
+
+        Toast tosdada=Toast.makeText(MainActivity.this, "Ensure all data boxes filled!!",Toast.LENGTH_SHORT);
+        tosdada.setGravity(Gravity.CENTER,0,0);
+        tosdada.show();
+
+
+    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
