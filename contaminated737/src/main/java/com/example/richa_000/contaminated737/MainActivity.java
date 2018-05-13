@@ -604,7 +604,9 @@ public class MainActivity extends AppCompatActivity {
             }else if (printResult==11){
                 TextView textView1 = (TextView) findViewById(R.id.textView24);//good ab1
                 textView1.setText(weight);
-
+                if (ii==33){
+                    textView1.setText("XXXX"); //because show AB3 not AB2 therefore is deleted.
+                }
             }
 
 
@@ -620,6 +622,7 @@ public class MainActivity extends AppCompatActivity {
 //======== Hide Virtual Keyboard =====================//
         if (stop==12 || stop==16) { //  || is "or"
             ii=33;
+
         }
 
     }
