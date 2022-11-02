@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <integer-array name="f40_medium_abmax">
-        <item>5200</item>
+        <item>5270</item>
         <item>510</item>
         <item>450</item>
         <item>140</item>

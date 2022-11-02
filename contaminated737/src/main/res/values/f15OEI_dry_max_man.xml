@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <integer-array name="f15oei_dry_max_man">
-        <item>3260</item>
+        <item>3760</item>
         <item>490</item>
         <item>230</item> //must be positive
         <item>80</item>

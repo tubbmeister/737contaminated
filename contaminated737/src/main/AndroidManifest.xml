@@ -17,10 +17,9 @@
             </intent-filter>
         </activity>
         <activity android:name="com.example.richa_000.contaminated737.About">
+
             android:label="About"
             android:parentActivityName=".MainActivity"
-
-
         </activity>
     </application>
 

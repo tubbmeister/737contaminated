@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <integer-array name="f30_good_abmax">
-    <item>4320</item>
+    <item>4900</item>
     <item>320</item>
     <item>330</item>
     <item>100</item>

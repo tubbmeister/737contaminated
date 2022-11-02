@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <integer-array name="f30_dry_ab2">
-        <item>5540</item>
-        <item>490</item>
+        <item>6950</item>
+        <item>560</item>
+        <item>600</item>
+        <item>180</item>
+        <item>-310</item>
+        <item>-1060</item>
+        <item>-90</item> <!-- must be minus to work!!! -->
+        <item>-140</item>
+        <item>170</item>
+        <item>-170</item><!-- % slope -->
         <item>520</item>
-        <item>160</item>
-        <item>-270</item>
-        <item>-920</item>
-        <item>-80</item> <!-- must be minus to work!!! -->
-        <item>-120</item>
-        <item>150</item>
-        <item>-150</item><!-- % slope -->
-        <item>450</item>
-        <item>200</item>  <!-- 1 t/r -->
-        <item>200</item>  <!-- 0 t/r -->
+        <item>230</item>  <!-- 1 t/r -->
+        <item>230</item>  <!-- 0 t/r -->
 
 
 
