@@ -499,7 +499,7 @@
                 android:textColor="@android:color/black"
                 android:textSize="12sp" />
             <TextView
-            android:id="@+id/text_Max_Medium"
+            android:id="@+id/textView_Max_Medium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/border"

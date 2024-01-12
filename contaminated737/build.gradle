@@ -18,6 +18,7 @@ android {
     }
     productFlavors {
     }
+    namespace 'com.example.richa_000.contaminated737'
 }
 
 dependencies {
