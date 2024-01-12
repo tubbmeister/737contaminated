@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer-array name="f30_dry_Max_Man">
+        <item>3530</item>
+        <item>350</item>
+        <item>180</item>
+        <item>60</item>
+        <item>-100</item>
+        <item>-370</item>
+        <item>-30</item> <!-- must be minus to work!!! -->
+        <item>-30</item>
+        <item>60</item>   <!-- app spd adjust -->
+        <item>-60</item>
+        <item>220</item>
+        <item>50</item>  <!-- 1 t/r -->
+        <item>140</item>  <!-- 0 t/r -->
+
+
+
+
+
+    </integer-array>
+
+</resources>
