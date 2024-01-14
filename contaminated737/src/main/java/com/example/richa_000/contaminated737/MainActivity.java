@@ -641,6 +641,10 @@ public class MainActivity extends AppCompatActivity {
             }else if (printResult==11){
                 TextView textView1 = (TextView) findViewById(R.id.textView24);//med ab1
                 textView1.setText(weight);
+                if (ii==37){
+                    textView1.setText("XXXX"); //because show AB3 not AB2 therefore is deleted.
+                }
+
 
                 }
             else if (printResult==12){
