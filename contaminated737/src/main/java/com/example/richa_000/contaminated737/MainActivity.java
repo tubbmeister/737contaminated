@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
     int ii,stop;
     int metric,autoLandAddition,autoLandAdditive;
     private CheckBox checkBox,checkBox2;
-    double units = 1;
+    double units = 1,fifteen_percent=1;
     public RadioGroup radioGroup, radioGroup1;
     private RadioButton oeif15,flaps30, flaps40, tr2,tr1,tr0,other;
 
@@ -491,6 +491,8 @@ public class MainActivity extends AppCompatActivity {
                 if (flaps=="oeif15") {
                      baseWeight=55000; //to cater for different weight datum f15
                     appspdadj=5;
+                     fifteen_percent=1.15;
+
                 }
                 else baseWeight=48000;
                 ref_dist = bases[0]; // get first element of array
@@ -572,6 +574,7 @@ public class MainActivity extends AppCompatActivity {
 
                 ref_dist = ref_dist + ref_dist1 + ref_dist2 + ref_dist3 + ref_dist7+ref_dist8+ref_dist9;
                 // ref_dist=floor(ref_dist);
+                ref_dist=ref_dist*fifteen_percent; //factors the OEI by 15%
                 int i = (int) ref_dist;
                 i=i+autoLandAdditive;//add 1000' here if autoland checked
                 double aa = (i/units);//convert feet to meters
