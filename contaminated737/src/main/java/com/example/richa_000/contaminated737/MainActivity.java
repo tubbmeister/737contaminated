@@ -289,6 +289,7 @@ public class MainActivity extends AppCompatActivity {
                     printResult++;
                     TextView textView7 = (TextView) findViewById(R.id.textView7);
                     textView7.setText("AB 3");
+                    fifteen_percent=1;//ensure that if a OEI calc is done the additional 15%is not added to normal flaps
                 }
 
                 else if (ii == 1) {
@@ -365,6 +366,7 @@ public class MainActivity extends AppCompatActivity {
                     printResult=0;
                     TextView textView7 = (TextView) findViewById(R.id.textView7);
                     textView7.setText("AB 3");
+                    fifteen_percent=1;
                }
 
                 else if (ii == 16) {
