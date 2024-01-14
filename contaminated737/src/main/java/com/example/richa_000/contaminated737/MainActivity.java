@@ -281,7 +281,7 @@ public class MainActivity extends AppCompatActivity {
                weight = ("" + myNum); //convert int to str
         Resources r = getResources();
         int printResult =-1;
-            for ( ii = stopper; ii <= 41; ii++) {
+            for ( ii = stopper; ii <= 39; ii++) {
 
                 stop++;
                 if (ii == 0) {
@@ -445,6 +445,12 @@ public class MainActivity extends AppCompatActivity {
                     textView13.setText("");
                     TextView textView21 = (TextView) findViewById(R.id.textView21);
                     textView21.setText("");
+                    TextView textViewMaxDry=(TextView) findViewById(R.id.textView_Max_dry);
+                    textViewMaxDry.setText("");
+                    TextView textViewMaxGood=(TextView) findViewById(R.id.textView_Max_Good);
+                    textViewMaxGood.setText("");
+                    TextView textViewMaxMed=(TextView) findViewById(R.id.textView_Max_Medium);
+                    textViewMaxMed.setText("");
                 }
                 else if (ii == 31) {
                     bases = r.getIntArray(R.array.f15oei_dry_abmax);
@@ -641,7 +647,7 @@ public class MainActivity extends AppCompatActivity {
             }else if (printResult==11){
                 TextView textView1 = (TextView) findViewById(R.id.textView24);//med ab1
                 textView1.setText(weight);
-                if (ii==37){
+                if (ii==39){
                     textView1.setText("XXXX"); //because show AB3 not AB2 therefore is deleted.
                 }
 
