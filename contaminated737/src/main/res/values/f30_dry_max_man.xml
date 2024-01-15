@@ -10,7 +10,7 @@
         <item>-30</item> <!-- must be minus to work!!! -->
         <item>-30</item>
         <item>60</item>   <!-- app spd adjust -->
-        <item>-60</item>
+        <item>60</item>
         <item>220</item>
         <item>50</item>  <!-- 1 t/r -->
         <item>140</item>  <!-- 0 t/r -->

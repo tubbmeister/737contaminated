@@ -232,7 +232,7 @@ public class MainActivity extends AppCompatActivity {
 
      //  int selectedId = radioGroup.getCheckedRadioButtonId();
         int baseWeight=48000;
-        int appspdadj=10;
+        int AppSpdAdj=10;
         double heavy;
         int stopper=0; // to control iteration
         oeif15 = (RadioButton) findViewById(R.id.radioButton6);
@@ -498,7 +498,7 @@ public class MainActivity extends AppCompatActivity {
 
                 if (flaps=="oeif15") {
                      baseWeight=55000; //to cater for different weight datum f15
-                    appspdadj=5;
+                    AppSpdAdj=5;//Speed adjustment is per 5 knots for OEI
                      fifteen_percent=1.15;
 
                 }
@@ -546,7 +546,7 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     Temp_Ref = (Temp_Ref / 10) * bases[9];
                 }
-                ref_dist7 = (spdadjustNum / appspdadj) * bases[10];
+                ref_dist7 = (spdadjustNum / AppSpdAdj) * bases[10];
                 double windissue,windissue1;
                 windissue = (winddctnNum - (rwdctnNum * 10));
                 windissue = (windissue) * (3.14159265358979 / 180);
