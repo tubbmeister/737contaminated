@@ -494,7 +494,7 @@ public class MainActivity extends AppCompatActivity {
                     printResult++;
                 }
 
-                double ref_dist, ref_dist1, ref_dist2, ref_dist3, ref_dist4, ref_dist5, ref_dist6, ref_dist7,ref_dist8,ref_dist9,cross;
+                double ref_dist, Alt_Ref, Temp_Ref, Wind_Ref,Slope_Ref,Spd_Ref, ref_dist4, ref_dist5, ref_dist6, ref_dist7,TR_Ref,cross;
 
                 if (flaps=="oeif15") {
                      baseWeight=55000; //to cater for different weight datum f15
@@ -514,36 +514,37 @@ public class MainActivity extends AppCompatActivity {
 
                 ref_dist = ref_dist + heavy;
 
-                ref_dist1 = (elevationNum / 1000) * bases[3];
-                ref_dist2 = (15 - (elevationNum / 1000) * 2) - (tempNum);
+                Alt_Ref = (elevationNum / 1000) * bases[3];//Ref_dist1
+              //  ref_dist2 = (15 - (elevationNum / 1000) * 2) - (tempNum);
+                Temp_Ref =  (tempNum)-(15 - (elevationNum / 1000) * 2) ;//ref_dist2
 
 
 
-                ref_dist8=slopeAdjustNum;
-                if (ref_dist8 > 0) {
-                    ref_dist8 = (ref_dist8  * bases[6]);
+                Slope_Ref=slopeAdjustNum;//ref_dist8
+                if (Slope_Ref > 0) {
+                    Slope_Ref = (Slope_Ref  * bases[6]);
                 } else {
-                    ref_dist8 = (ref_dist8  * bases[7]);
+                    Slope_Ref = (Slope_Ref  * bases[7]);
                 }
 
 
 
-                ref_dist9=0;
+                TR_Ref=0;
 
                 if (trNum==1) {
-                    ref_dist9=0;   //ref_dist9 = tr correction
+                    TR_Ref=0;   //ref_dist9 = tr correction
                 }
                     else if (trNum==2){
-                    ref_dist9=(bases[11]);
+                    TR_Ref=(bases[11]);
                 }
 
                     else if (trNum==3){
-                    ref_dist9=(bases[12]);
+                    TR_Ref=(bases[12]);
                 }
-                if (ref_dist2 > 0) {
-                    ref_dist2 = (ref_dist2 / 10) * bases[9];
+                if (Temp_Ref > 0) {
+                    Temp_Ref = (Temp_Ref / 10) * bases[8];
                 } else {
-                    ref_dist2 = (ref_dist2 / 10) * bases[8];
+                    Temp_Ref = (Temp_Ref / 10) * bases[9];
                 }
                 ref_dist7 = (spdadjustNum / appspdadj) * bases[10];
                 double windissue,windissue1;
@@ -553,14 +554,14 @@ public class MainActivity extends AppCompatActivity {
                 windissue = cos(windissue);
 
 
-                ref_dist3 = (winspeedNum * windissue);
+                Wind_Ref = (winspeedNum * windissue);
                 windissue1 = sin(windissue1);
                 cross=windissue1*winspeedNum;
                 TextView textView19 = (TextView) findViewById(R.id.textView19);
                 TextView textView18 = (TextView) findViewById(R.id.textView18);
                 TextView textView16 = (TextView) findViewById(R.id.textView16);
                 TextView textView17 = (TextView) findViewById(R.id.textView17);
-                int b =(int)Math.round(ref_dist3); //get rid of decimal
+                int b =(int)Math.round(Wind_Ref); //get rid of decimal
 
                 int c =(int)Math.round(cross); //get rid of decimal
                 c=abs(c);
@@ -569,18 +570,18 @@ public class MainActivity extends AppCompatActivity {
                 textView16.setText(""+b); //show headwind component
                 textView17.setVisibility(View.VISIBLE);
 
-                if (ref_dist3 > 0) {
+                if (Wind_Ref > 0) {//ref_dist3=wind_ref
 
-                    ref_dist3 = (ref_dist3 / 10) * bases[4];
+                    Wind_Ref = (Wind_Ref / 10) * bases[4];
 
 
                 } else {
 
-                    ref_dist3 = (ref_dist3 / 10) * bases[5];
+                    Wind_Ref = (Wind_Ref / 10) * bases[5];
                 }
 
 
-                ref_dist = ref_dist + ref_dist1 + ref_dist2 + ref_dist3 + ref_dist7+ref_dist8+ref_dist9;
+                ref_dist = ref_dist + Alt_Ref + Temp_Ref + Wind_Ref + ref_dist7+Slope_Ref+TR_Ref;
                 // ref_dist=floor(ref_dist);
                 ref_dist=ref_dist*fifteen_percent; //factors the OEI by 15%
                 int i = (int) ref_dist;
